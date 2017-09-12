@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" ></meta>
   <title>Ajax Memo Application</title>
-  <script src="/js/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/js/memo.js"></script>
 </head>
 <body>
   <form th:action="@{/memos}" method="POST">
@@ -11,7 +12,13 @@
     <input type="submit" name="SEND" />
   </form>
   <ul>
-    <li th:each="memo: ${memos}" th:text="${memo.text}"></li>
-  </ul>
+     <li th:each="memo: ${memos}" th:text="${memo.text}"></li>
+ </ul>
+<script>
+$('form').on('submit', function(e){
+    e.preventDefault();
+    postComment($('input[type=text]').val());
+});
+</script>
 </body>
 </html>

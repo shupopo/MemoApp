@@ -20,9 +20,9 @@ public class MemoController {
     return "index";
   }
   
-  @RequestMapping(value = "/memos", method = RequestMethod.POST)
-  public String create(@ModelAttribute("memo") Memo memo) {
-    memoService.saveAndFlush(memo);
-    return "redirect:/";
-  }
+//  @RequestMapping(value = "/memos", method = RequestMethod.POST)
+//  public String create(@ModelAttribute("memo") Memo memo) {
+//    memoService.saveAndFlush(memo);
+//    return "redirect:/";
+//  }
 }
