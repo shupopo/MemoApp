@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Ajax Memo Application</title>
+</head>
+<body>
+  <form th:action="@{/memos}" method="POST">
+    <input type="text" name="text" />
+    <input type="submit" name="SEND" />
+  </form>
+  <ul>
+    <li th:each="memo: ${memos}" th:text="${memo.text}"></li>
+  </ul>
+</body>
+</html>
