@@ -1,5 +1,5 @@
-function ajax(text) {
-	jQuery.ajax({
+function postComment(text) {
+    $.ajax({
         headers: { 
             'Accept': 'application/json',
             'Content-Type': 'application/json' 

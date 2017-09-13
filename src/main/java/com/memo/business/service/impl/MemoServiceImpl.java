@@ -23,7 +23,7 @@ public class MemoServiceImpl implements MemoService {
 
 	@Override
 	public void saveAndFlush(Memo memo) {
-		memoRepository.save(memo);
+		memoRepository.saveAndFlush(memo);
 		
 	}
 
